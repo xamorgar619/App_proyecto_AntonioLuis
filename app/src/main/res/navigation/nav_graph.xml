@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.app_proyecto_antonioluis.InicioFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_CochesFragment"
+            app:destination="@id/CochesFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_MotosFragment"
+            app:destination="@id/MotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CochesFragment"
+        android:name="com.example.app_proyecto_antonioluis.CochesFragment"
+        android:label="Galería de coches"
+        tools:layout="@layout/fragment_coches" >
+        <action
+            android:id="@+id/action_CochesFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MotosFragment"
+        android:name="com.example.app_proyecto_antonioluis.MotosFragment"
+        android:label="Galería de motos"
+        tools:layout="@layout/fragment_motos" >
+    <action
+        android:id="@+id/action_CochesFragment_to_inicioFragment"
+        app:destination="@id/inicioFragment" />
+    </fragment>
+</navigation>
