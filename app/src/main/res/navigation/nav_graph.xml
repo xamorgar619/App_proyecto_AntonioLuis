@@ -11,29 +11,26 @@
         android:label="Inicio"
         tools:layout="@layout/fragment_inicio" >
         <action
-            android:id="@+id/action_inicioFragment_to_CochesFragment"
-            app:destination="@id/CochesFragment" />
-        <action
-            android:id="@+id/action_inicioFragment_to_MotosFragment"
-            app:destination="@id/MotosFragment" />
+            android:id="@+id/action_inicioFragment_to_ArticulosFragment"
+            app:destination="@id/ArticulosFragment"    />
     </fragment>
 
     <fragment
-        android:id="@+id/CochesFragment"
-        android:name="com.example.app_proyecto_antonioluis.CochesFragment"
+        android:id="@+id/ArticulosFragment"
+        android:name="com.example.app_proyecto_antonioluis.ArticulosFragment"
         android:label="Galería de coches"
-        tools:layout="@layout/fragment_coches" >
+        tools:layout="@layout/fragment_articulos" >
         <action
-            android:id="@+id/action_CochesFragment_to_inicioFragment"
+            android:id="@+id/action_ArticulosFragment_to_inicioFragment"
             app:destination="@id/inicioFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/MotosFragment"
-        android:name="com.example.app_proyecto_antonioluis.MotosFragment"
-        android:label="Galería de motos"
-        tools:layout="@layout/fragment_motos" >
-    <action
-        android:id="@+id/action_CochesFragment_to_inicioFragment"
-        app:destination="@id/inicioFragment" />
+        android:id="@+id/PerfilFragment"
+        android:name="com.example.app_proyecto_antonioluis.PerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil" >
+
     </fragment>
+
 </navigation>

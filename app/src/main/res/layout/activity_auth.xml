@@ -1,84 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".AuthActivity">
+
+    <ImageView
+        android:layout_width="284dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/textViewA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="10dp"
         android:text="Autenticación"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/black"
+        android:textColorHint="#666666" />
 
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
-
-    <Button
-        android:id="@+id/btnRegistrar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        android:text="Registrarse"
-        app:layout_constraintEnd_toStartOf="@+id/btnAcceder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        android:textColor="@color/black"
+        android:textColorHint="#666666" />
 
     <Button
         android:id="@+id/btnAcceder"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/black"
         android:text="Acceder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRegistrar"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        android:textColor="@android:color/white"
+        app:backgroundTint="#000000" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/black"
+        android:text="Registrarse"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#000000" />
 
     <Button
         android:id="@+id/btnGoogle"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/black"
+        android:drawableLeft="@drawable/googleg_standard_color_18"
         android:text="Google"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAcceder"
-        app:layout_constraintVertical_bias="0.049" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="@color/white"
+        app:backgroundTint="#6BBBFA" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="245dp"
+        android:text="ALMG ©"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+</LinearLayout>

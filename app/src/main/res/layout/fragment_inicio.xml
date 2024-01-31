@@ -9,37 +9,36 @@
     android:background="@color/white">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="129dp"
+        android:layout_width="284dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
-        android:src="@drawable/logo1" />
+        android:src="@drawable/logo" />
 
     <Button
-        android:id="@+id/btnCoches"
+        android:id="@+id/btnArticulos"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="55dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/botones_cuadrados"
-        android:text="Galería de coches"
+        android:text="Artículos"
+        android:background="@android:color/black"
         android:textColor="@color/white"
         app:backgroundTint="#000000"/>
 
     <Button
-        android:id="@+id/btnMotos"
+        android:id="@+id/btnEjemplo"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/botones_cuadrados"
-        android:text="Galería de motos"
+        android:text="Ejemplo"
+        android:background="@android:color/black"
         android:textColor="@color/white"
         app:backgroundTint="#000000"/>
 
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
+    <!-- este View es para el espacio entre el botón y el menú inferior -->
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-  </LinearLayout>
+</LinearLayout>

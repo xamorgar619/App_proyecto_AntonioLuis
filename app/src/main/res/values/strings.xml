@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">App_proyecto_AntonioLuis</string>
+    <string name="preferences_file">com.example.app_proyecto_antonioluis.PREFERENCE_FILE_KEY</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_web_client_id">your_web_client_id_here</string>
 </resources>
