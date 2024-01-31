@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "551286629866-ks89s85qpp63a2s14g16ku0du7jo5mbi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_proyecto_antonioluis",
+            "certificate_hash": "64eef253286fd7d284247736ae348ffac2659e34"
+          }
+        },
+        {
           "client_id": "551286629866-jm93r5kducro7fpssv3v6ga1o2pdh1r1.apps.googleusercontent.com",
           "client_type": 3
         }
