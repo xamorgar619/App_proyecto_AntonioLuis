@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnAtras"
+        android:icon="@drawable/icono_back"
+        android:title="Atrás"
+        android:tint="@color/black" />
+    <item
+        android:id="@+id/btnFav"
+        android:icon="@drawable/icono_fav"
+        android:title="Favoritos"
+        android:tint="@color/black" />
+    <item
+        android:id="@+id/btnInicio"
+        android:icon="@drawable/icono_home"
+        android:title="Inicio"
+        android:tint="@color/black" />
+    <item
+        android:id="@+id/btnCesta"
+        android:icon="@drawable/icono_cesta"
+        android:title="Mi cesta"
+        android:tint="@color/black" />
+    <item
+        android:id="@+id/btnMiCuenta"
+        android:icon="@drawable/icono_profile"
+        android:title="Mi cuenta"
+        android:tint="@color/black" />
+</menu>
