@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setup(email : String, provider : String) {
-        title = "Inicio"
         val bundle = Bundle()
         bundle.putString("email", email)
         bundle.putString("provider", provider)
