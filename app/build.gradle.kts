@@ -62,4 +62,5 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation ("com.squareup.picasso:picasso:2.71828") //plugin para cargar imagenes
+    implementation("com.google.firebase:firebase-firestore")
 }

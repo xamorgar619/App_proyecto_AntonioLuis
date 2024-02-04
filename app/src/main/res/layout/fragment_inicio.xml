@@ -25,15 +25,6 @@
         android:textColor="@color/white"
         app:backgroundTint="#000000"/>
 
-    <Button
-        android:id="@+id/btnEjemplo"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginBottom="16dp"
-        android:text="Ejemplo"
-        android:background="@android:color/black"
-        android:textColor="@color/white"
-        app:backgroundTint="#000000"/>
 
     <!-- este View es para el espacio entre el botón y el menú inferior -->
     <View
