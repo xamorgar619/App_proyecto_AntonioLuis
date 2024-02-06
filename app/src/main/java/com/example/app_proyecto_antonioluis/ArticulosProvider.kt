@@ -7,10 +7,10 @@ class ArticulosProvider {
 
     companion object {
 
-        private val db = FirebaseFirestore.getInstance()
-        private val articulosCollection = db.collection("articulos")
+        // private val db = FirebaseFirestore.getInstance()
+        //private val articulosCollection = db.collection("articulos")
 
-        fun obtenerArticulos(callback: (List<Articulo>) -> Unit) {
+       /* fun obtenerArticulos(callback: (List<Articulo>) -> Unit) {
             articulosCollection.get()
                 .addOnSuccessListener { result ->
                     val listaArticulos = mutableListOf<Articulo>()
@@ -22,7 +22,6 @@ class ArticulosProvider {
                 }
                 .addOnFailureListener { e ->
                     println("Error al cargar los artículos: $e")
-                }
+                } */
         }
     }
-}
