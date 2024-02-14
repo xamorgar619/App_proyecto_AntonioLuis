@@ -33,4 +33,14 @@
 
     </fragment>
 
+    <fragment
+        android:id="@+id/FavoritosFragment"
+        android:name="com.example.app_proyecto_antonioluis.FavoritosFragment"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_favoritos" >
+        <action
+            android:id="@+id/action_FavoritosFragment_to_ArticulosFragment"
+            app:destination="@id/ArticulosFragment" />
+    </fragment>
+
 </navigation>

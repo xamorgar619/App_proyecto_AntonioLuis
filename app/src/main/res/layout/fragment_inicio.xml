@@ -23,7 +23,7 @@
         android:text="Artículos"
         android:background="@android:color/black"
         android:textColor="@color/white"
-        app:backgroundTint="#000000"/>
+        app:backgroundTint="#03A9F4"/>
 
 
     <!-- este View es para el espacio entre el botón y el menú inferior -->

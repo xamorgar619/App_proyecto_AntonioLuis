@@ -33,7 +33,16 @@ class MainActivity : AppCompatActivity() {
         menu.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.btnAtras -> {
-                    onBackPressed()
+                    if (findNavController(R.id.nav_host_fragment).currentDestination?.id != R.id.inicioFragment) {
+                        onBackPressed()
+                    } else if (findNavController(R.id.nav_host_fragment).currentDestination?.id == R.id.PerfilFragment) {
+                        findNavController(R.id.nav_host_fragment).navigate(R.id.inicioFragment)
+                    }
+                    true
+                }
+
+                R.id.btnFav -> {
+                    findNavController(R.id.nav_host_fragment).navigate(R.id.FavoritosFragment)
                     true
                 }
 
