@@ -43,4 +43,14 @@
             app:destination="@id/ArticulosFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/CestaFragment"
+        android:name="com.example.app_proyecto_antonioluis.CestaFragment"
+        android:label="Cesta"
+        tools:layout="@layout/fragment_cesta" >
+        <action
+            android:id="@+id/action_CestaFragment_to_InicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+
 </navigation>

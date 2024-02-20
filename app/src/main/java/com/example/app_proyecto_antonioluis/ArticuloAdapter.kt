@@ -9,7 +9,6 @@ import com.example.app_proyecto_antonioluis.databinding.ArticuloBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
-import kotlinx.coroutines.tasks.await
 
 class ArticuloAdapter(private val articulos: List<Articulo>) : RecyclerView.Adapter<ArticuloAdapter.ViewHolder>() {
 
@@ -23,11 +22,16 @@ class ArticuloAdapter(private val articulos: List<Articulo>) : RecyclerView.Adap
             binding.descripcionView.text = articulo.descripcion
             binding.precioView.text = articulo.precio
 
+            /*
             if (articulo.favorito) {
                 binding.btnFavoritos.setImageResource(R.drawable.icono_fav)
             } else {
                 binding.btnFavoritos.setImageResource(R.drawable.icono_fav_blanco)
             }
+             */
+
+
+
 
             // Evento para añadir a favoritos
             binding.btnFavoritos.setOnClickListener {
@@ -72,7 +76,11 @@ class ArticuloAdapter(private val articulos: List<Articulo>) : RecyclerView.Adap
                     if (task.isSuccessful) {
                         val document = task.result
                         if (document != null && document.exists()) {
-
+                            Toast.makeText(
+                                context,
+                                "Este artículo ya está en la cesta",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         } else {
                             añadirACesta(articulo)
 
@@ -129,6 +137,40 @@ class ArticuloAdapter(private val articulos: List<Articulo>) : RecyclerView.Adap
                     }
                 }
             }
+        }
+
+        private fun quitarDeCesta(articulo: Articulo) {
+            val idUsuario =
+                FirebaseAuth.getInstance().currentUser?.uid.toString() // Usamos el ID del usuario actual para el id del documento
+            val db = FirebaseFirestore.getInstance()
+            val cestaRef = db.collection("Usuarios").document(idUsuario).collection("cesta")
+            val docRef = cestaRef.document(articulo.id)
+
+            docRef.get().addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val document = task.result
+                    if (document != null && document.exists()) {
+                        // El artículo está en la cesta, así que lo eliminamos
+                        docRef.delete().addOnSuccessListener {
+                            Toast.makeText(
+                                context,
+                                "Artículo eliminado de la cesta",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }.addOnFailureListener { e ->
+                            Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+                        }
+                    } else {
+                        // El artículo no está en la cesta
+                        Toast.makeText(
+                            context,
+                            "Este artículo no está en la cesta",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
         }
 
         private fun añadirAFavoritos(articulo: Articulo) {

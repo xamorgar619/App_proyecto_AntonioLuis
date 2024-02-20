@@ -51,6 +51,11 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
+                R.id.btnCesta -> {
+                    findNavController(R.id.nav_host_fragment).navigate(R.id.CestaFragment)
+                    true
+                }
+
                 R.id.btnMiCuenta -> {
                         findNavController(R.id.nav_host_fragment).navigate(R.id.PerfilFragment)
                     true
