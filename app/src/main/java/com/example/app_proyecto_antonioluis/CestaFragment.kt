@@ -84,6 +84,14 @@ class CestaFragment : Fragment(R.layout.fragment_cesta) {
             findNavController().navigate(R.id.action_CestaFragment_to_InicioFragment)
         }
 
+        btnComprar.setOnClickListener {
+            Toast.makeText(
+                context,
+                "Esta función aún no está disponible",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+
         val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
             findNavController().navigate(R.id.action_ArticulosFragment_to_inicioFragment)
         }
