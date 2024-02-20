@@ -29,7 +29,7 @@ class ArticuloAdapter(private val articulos: List<Articulo>) : RecyclerView.Adap
                 binding.btnFavoritos.setImageResource(R.drawable.icono_fav_blanco)
             }
 
-            // Añadir evento para añadir a favoritos
+            // Evento para añadir a favoritos
             binding.btnFavoritos.setOnClickListener {
                 val idUsuario = FirebaseAuth.getInstance().currentUser?.uid.toString()
                 val db = FirebaseFirestore.getInstance()
@@ -61,7 +61,7 @@ class ArticuloAdapter(private val articulos: List<Articulo>) : RecyclerView.Adap
                 }
             }
 
-            // Añadir evento para añadir a la cesta
+            // Evento para añadir a la cesta
             binding.btnCesta.setOnClickListener {
                 val idUsuario = FirebaseAuth.getInstance().currentUser?.uid.toString()
                 val db = FirebaseFirestore.getInstance()
