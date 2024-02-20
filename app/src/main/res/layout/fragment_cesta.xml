@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvArticulosCesta"
+        android:layout_width="match_parent"
+        android:layout_height="590dp"
+        android:layout_centerHorizontal="true"
+        android:clipToPadding="false"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/lista_vacia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:padding="16dp"
+        android:text="Oops... Tu cesta está vacía :'("
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnVaciarCesta"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/rvArticulosCesta"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/icono_papelera"
+        android:text=""
+        android:textColor="@color/white"
+        app:backgroundTint="#F40303" />
+
+    <Button
+        android:id="@+id/btnComprar"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:text="Comprar"
+        android:layout_below="@id/rvArticulosCesta"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/black"
+        android:textColor="@color/white"
+        app:backgroundTint="#000000" />
+
+
+
+</RelativeLayout>
