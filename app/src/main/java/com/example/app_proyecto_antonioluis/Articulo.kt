@@ -6,6 +6,7 @@ class Articulo {
     var precio: String = ""
     var descripcion: String = ""
     var imagenUrl: String = ""
+    var favorito: Boolean = false
 
 
     // Constructor vacío para que funcione la carga de datos de Firestore

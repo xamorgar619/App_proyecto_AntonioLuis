@@ -65,7 +65,7 @@
             android:src="@drawable/icono_fav_blanco" />
 
         <Button
-            android:id="@+id/btnAñadirCesta"
+            android:id="@+id/btnCesta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/precioView"

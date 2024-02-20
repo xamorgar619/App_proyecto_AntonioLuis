@@ -59,4 +59,13 @@
         android:textColor="@color/white"
         app:backgroundTint="#BF0000" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnLogout"
+        android:layout_marginTop="245dp"
+        android:text="ALMG ©"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
 </RelativeLayout>
