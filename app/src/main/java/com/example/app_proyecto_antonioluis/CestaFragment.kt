@@ -61,7 +61,7 @@ class CestaFragment : Fragment(R.layout.fragment_cesta) {
                 println("Error al cargar los artículos: $exception")
             }
 
-        //que vacie la cesta compleetamente
+        //evento para vaciar la cesta completamente
         btnVaciarCesta.setOnClickListener {
             firestore.collection("Usuarios").document(userId).collection("cesta")
                 .get()
